@@ -1,0 +1,1 @@
+Gaussian distribution for given range, 0-50.
