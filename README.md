@@ -1,1 +1,1 @@
-Min primes: 0 (row:1671800 - 1671900), max: 25 (row:2 - 100)
+Dunno, some math codes.
