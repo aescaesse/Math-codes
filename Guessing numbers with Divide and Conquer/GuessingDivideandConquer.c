@@ -39,7 +39,7 @@ void AGuess()
 	scanf_s("%d", &number);
 	int AGuess;
 	int B=0, T = 100;
-	AGuess = (100 / 2) + 1;
+	AGuess = (T / 2) + 1;
 	bool Guessed = 0;
 	while (!Guessed)
 	{
