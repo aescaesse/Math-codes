@@ -25,9 +25,7 @@ void FromRange(int od, int b) {
 		i++;
 	}
 	if (ifExist == 0)
-	{
 		cout << "Nothing";
-	}
 }
 
 int main() {
