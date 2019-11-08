@@ -7,11 +7,9 @@
 #include <stdbool.h>
 #include <windows.h>
 
-int Numbers[10] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 int Best_Start = 0, Best_End = 0;
-int Count_Elements = sizeof(Numbers) / sizeof(Numbers[0]) - 1;
 
-int Max_Subarray(int Numbers[])
+int Max_Subarray(int Numbers[], int Count_Elements)
 {
 	int Current_Start = 0, Current_End = 0;
 	int Current_Sum = 0, Best_Sum = 0;
@@ -35,31 +33,29 @@ int Max_Subarray(int Numbers[])
 	return 0;
 }
 
-void Draw_Array()
+void Draw_Array(int Numbers[], int Count_Elements)
 {
 	printf("Given array: [ ");
-	for (int i=0; i< Count_Elements; i++)
-	{
+	for (int i = 0; i < Count_Elements; i++)
 		printf("%d, ", Numbers[i]);
-	}
 	printf("]\n");
 }
 
-void Draw_Results(int Start, int End)
+void Draw_Results(int Start, int End, int Numbers[])
 {
 	printf("Made from sequence: [ ");
 	for (;Start < End;Start++)
-	{
 		printf("%d, ", Numbers[Start]);
-	}
 	printf("]");
 }
 
 void Core()
 {
-	Draw_Array();
-	Max_Subarray(Numbers);
-	Draw_Results(Best_Start, Best_End);
+	int Numbers[10] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+	int Count_Elements = sizeof(Numbers) / sizeof(Numbers[0]) - 1;
+	Draw_Array(Numbers, Count_Elements);
+	Max_Subarray(Numbers, Count_Elements);
+	Draw_Results(Best_Start, Best_End, Numbers);
 }
 
 int main()
