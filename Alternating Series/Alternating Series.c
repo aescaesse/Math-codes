@@ -1,4 +1,4 @@
-﻿#include <stdio.h> 
+#include <stdio.h> 
 #include <time.h> 
 #include <stdlib.h> 
 #include <conio.h> 
@@ -6,9 +6,6 @@
 #include <float.h>
 #include <stdbool.h>
 #include <windows.h>
-
-long double Value;
-int n;
 
 long double Factorial(int n)
 {
@@ -20,6 +17,8 @@ long double Factorial(int n)
 
 void Core()
 {
+	long double Value;
+	int n;
 	n = 0;
 	long double F;
 	while (1)
