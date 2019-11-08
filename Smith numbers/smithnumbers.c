@@ -7,10 +7,10 @@ int IsPrime(int p) {
 	if (p == 2) return 1;
 	else if (p <= 1 || p % 2 == 0) return 0;
 	else 
-		for (int i = 3; i < p; i++)
-			if (p % i == 0)
-				return 0;
-		return 1;
+	for (int i = 3; i < p; i++)
+		if (p % i == 0)
+			return 0;
+	return 1;
 }
 
 int SumOfDigits(int n)
@@ -29,14 +29,12 @@ int PrimeFactors(int n)
 {
 	int sum = 0;
 	for (int i = 2; i <= n; i++) 
-	{
 		if (IsPrime(i))
 			while (n % i == 0 && i != 1)
 			{
 				sum += SumOfDigits(i);
 				n /= i;
 			}	
-	}
 	return sum;
 }
 
@@ -51,7 +49,6 @@ void Core()
 				printf("%d ", n);
 		n++;
 	}
-
 }
 
 int main()
