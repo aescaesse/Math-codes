@@ -14,9 +14,7 @@ long double Factorial(int n)
 {
 	long double factorial = 1;
 	for (int i = 1; i <= n +1; ++i)
-	{
 		factorial *= i;
-	}
 	return factorial;
 }
 
@@ -30,9 +28,7 @@ void Core()
 		Value = (pow(-1, n)) / F;
 		printf("%.250Lf \n", Value);
 		n++;
-		Sleep(100);
 	}
-	
 }
 
 int main()
