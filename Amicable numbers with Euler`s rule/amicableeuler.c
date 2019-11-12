@@ -6,12 +6,11 @@
 int IsPrime(int p) {
 	if (p == 2) return 1;
 	else if (p <= 1 || p % 2 == 0) return 0;
-	else {
+	else 
+	{
 		for (int i = 3; i < p; i++)
-		{
 			if (p % i == 0)
 				return 0;
-		}
 		return 1;
 	}
 }
@@ -38,9 +37,7 @@ void Core()
 	while (1)
 	{
 		for (int i = 1; i <= n; i++)
-		{
 			EulersStates(n,i);
-		}
 		n++;
 	}
 }
